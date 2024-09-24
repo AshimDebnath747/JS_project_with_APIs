@@ -46,7 +46,7 @@ btn.addEventListener("click",async (e)=>{
     input.value = 100;
     valFrom = input.value;
    }
-   let converter = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`);
+   let converter = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurr.value}.json`);
    let data = await converter.json();
    let rate = data[toCurr.value.toLowerCase()];
    valTo = valFrom * rate;
